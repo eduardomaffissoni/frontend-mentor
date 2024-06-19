@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Newsletter from './newsletter.jsx';
 import './index.css';
+import App from './App.jsx';
+import Forum from './comment-section.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Newsletter />
+    <Forum />
   </React.StrictMode>
 );
