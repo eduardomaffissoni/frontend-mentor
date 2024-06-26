@@ -1,8 +1,8 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-
-function App() {
+import BackButton from '../BackButton';
+function Newsletter() {
   const [email, setEmail] = useState('');
   const [success, setSuccess] = useState(false);
   const onSubmit = function () {
@@ -18,6 +18,7 @@ function App() {
   };
   return (
     <div className='flex h-screen bg-slate-600'>
+      <BackButton />
       <Container>
         {success ? (
           <SuccessMessage userEmail={email} />
@@ -152,4 +153,4 @@ function Header({ title, text }) {
   );
 }
 
-export default App;
+export default Newsletter;

@@ -1,15 +1,16 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import BackButton from '../BackButton';
 
-function App() {
+function Form() {
   return (
     <div className='flex bg-emerald-50 h-screen'>
-      <Form />;
+      <App />;
     </div>
   );
 }
 
-function Form() {
+function App({}) {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = function () {
     setSubmitted(true);
@@ -17,6 +18,7 @@ function Form() {
 
   return (
     <div className='container text-slate-700 p-8 m-auto min-w-fit w-2/5 bg-white rounded-xl'>
+      <BackButton />
       <h1 className='font-bold text-3xl pb-4 text-black'> Contact Us </h1>
       <div className='flex gap-5'>
         <Input submitted={submitted} type='text' label='First Name' />
@@ -209,4 +211,4 @@ function Submit({ handler }) {
   );
 }
 
-export default App;
+export default Form;
